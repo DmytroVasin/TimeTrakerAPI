@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
+ruby '2.2.2'
 
 gem 'rails', '>= 5.0.0.beta1', '< 5.1'
 
-
-gem 'sqlite3'
+gem 'pg'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'rack-cors'
 
@@ -18,4 +18,8 @@ group :development do
   gem 'pry-remote'
   gem 'pry-nav'
   gem 'hirb'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
