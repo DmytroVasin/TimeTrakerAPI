@@ -170,6 +170,3 @@ DEPENDENCIES
   rack-cors
   rails (>= 5.0.0.beta1, < 5.1)
   rails_12factor
-
-BUNDLED WITH
-   1.12.5

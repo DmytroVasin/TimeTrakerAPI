@@ -15,7 +15,7 @@ class StoriesController < ApplicationController
 
   # POST /stories
   def create
-    @story = Story.new(story_params.merge(period: 3, story_type: 'grey'))
+    @story = Story.new(story_params.merge(story_type: 'grey'))
 
     if @story.save
       render json: @story, status: :created, location: @story
@@ -46,6 +46,6 @@ class StoriesController < ApplicationController
     end
 
     def story_params
-      params.require(:story).permit(:title, :description)
+      params.require(:story).permit(:title, :description, :period)
     end
 end
