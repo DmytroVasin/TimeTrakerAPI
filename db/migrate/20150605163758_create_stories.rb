@@ -4,7 +4,7 @@ class CreateStories < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.integer :period
-      t.string :story_type
+      t.integer :story_type
 
       t.timestamps
     end

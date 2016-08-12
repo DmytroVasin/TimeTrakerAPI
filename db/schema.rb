@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150605163758) do
     t.string   "title"
     t.text     "description"
     t.integer  "period"
-    t.string   "story_type"
+    t.integer  "story_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
