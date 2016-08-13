@@ -15,7 +15,7 @@ class StoriesController < ApplicationController
 
   # POST /stories
   def create
-    @story = Story.new(story_params.merge(story_type: 'grey'))
+    @story = Story.new(story_params.merge(story_type: 'to_estimate'))
 
     if @story.save
       render json: @story, status: :created, location: @story
