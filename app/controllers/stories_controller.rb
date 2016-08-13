@@ -3,7 +3,7 @@ class StoriesController < ApplicationController
 
   # GET /stories
   def index
-    @stories = Story.all
+    @stories = Story.includes(:period).all
 
     render json: @stories
   end
@@ -46,6 +46,6 @@ class StoriesController < ApplicationController
     end
 
     def story_params
-      params.require(:story).permit(:title, :description, :period, :story_type)
+      params.require(:story).permit(:title, :description, :period_id, :story_type)
     end
 end
