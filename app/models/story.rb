@@ -1,5 +1,5 @@
 class Story < ActiveRecord::Base
-  enum story_type: { yellow: 0, green: 1, red: 2, grey: 3 }
+  enum story_type: { estimated: 0, done: 1, in_progress: 2, to_estimate: 3 }
 
   belongs_to :period
 
