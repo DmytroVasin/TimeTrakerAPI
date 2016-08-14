@@ -35,9 +35,11 @@ class StoriesController < ApplicationController
 
   # DELETE /stories/1
   def destroy
-    @story.destroy
-
-    head :no_content
+    if @story.destroy
+      render json: @story
+    else
+      render json: @story.errors, status: :unprocessable_entity
+    end
   end
 
   private
