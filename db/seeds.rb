@@ -1,12 +1,13 @@
 Story.delete_all
 Period.delete_all
+Task.delete_all
 
 unscheduled = Period.create(name: 'Unscheduled')
 overdue     = Period.create(name: 'Overdue')
 period_1    = Period.create(name: 'Sprint 1')
 period_2    = Period.create(name: 'Sprint 2')
 
-Story.create(
+story_1 = Story.create(
   period: unscheduled,
   story_type: Story.story_types.keys.sample,
   title: 'LA-1535: Education Grants',
@@ -60,4 +61,10 @@ Story.create(
   story_type: Story.story_types.keys.sample,
   title: 'LA-1642: An alphanumeric biller code will be added to all accounts',
   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+)
+
+Task.create(
+  time: '90',
+  comment: 'Create first education!',
+  story_id: story_1.id
 )
