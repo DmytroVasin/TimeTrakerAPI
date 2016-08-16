@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_story, only: [:index, :create]
+  before_action :set_story, only: [:index, :create, :destroy]
 
   # GET /stories/:story_id/tasks
   def index
@@ -14,6 +14,17 @@ class TasksController < ApplicationController
 
     if @task.save
       render json: @task, status: :created
+    else
+      render json: @task.errors, status: :unprocessable_entity
+    end
+  end
+
+  # DELETE /stories/1
+  def destroy
+    @task = @story.tasks.find(params[:id])
+
+    if @task.destroy
+      render json: @task
     else
       render json: @task.errors, status: :unprocessable_entity
     end
