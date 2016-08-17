@@ -3,6 +3,7 @@ class Story < ActiveRecord::Base
 
   belongs_to :period
   has_many :tasks
+  has_many :current_week_tasks, -> { where(created_at: DateTime.current.beginning_of_week..DateTime.current.end_of_week) }, class_name: 'Task'
 
   validates :story_type, :title, presence: true
   validates :story_type, inclusion: { in: Story.story_types.keys }
