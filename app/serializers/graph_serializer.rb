@@ -1,5 +1,5 @@
 class GraphSerializer < ActiveModel::Serializer
-  attributes :id, :title
+  attributes :id, :title, :story_type, :created_at
 
   has_many :log_work, serializer: GraphLogWorkSerializer
 
