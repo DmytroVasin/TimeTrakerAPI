@@ -3,7 +3,8 @@ class TasksController < ApplicationController
 
   # GET /stories/:story_id/tasks
   def index
-    @tasks = @story.tasks
+    dateString = Date.strptime(params[:task_date], '%a %d/%b')
+    @tasks = @story.tasks.for_particular_date(dateString)
 
     render json: @tasks
   end
