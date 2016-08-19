@@ -64,20 +64,20 @@ Story.create(
 )
 
 Task.create(
-  time: '90',
+  minutes: '90',
   comment: 'Create ZERO education!',
   story_id: story_1.id
 )
 
 Task.create(
-  time: '90',
+  minutes: '90',
   comment: 'Create first education!',
   story_id: story_1.id
 )
 
 
 Task.create(
-  time: '30',
+  minutes: '30',
   comment: 'Create second education!',
   story_id: story_1.id,
   task_date: DateTime.yesterday
@@ -85,7 +85,7 @@ Task.create(
 
 
 Task.create(
-  time: '10',
+  minutes: '10',
   comment: 'Create five education!',
   story_id: story_1.id,
   task_date: DateTime.yesterday

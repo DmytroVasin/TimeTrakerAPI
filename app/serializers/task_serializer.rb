@@ -1,3 +1,3 @@
 class TaskSerializer < ActiveModel::Serializer
-  attributes :id, :time, :comment, :task_date
+  attributes :id, :minutes, :comment, :task_date
 end

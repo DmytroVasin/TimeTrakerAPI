@@ -36,6 +36,6 @@ class TasksController < ApplicationController
     end
 
     def task_params
-      params.require(:task).permit(:time, :comment, :task_date)
+      params.require(:task).permit(:minutes, :comment, :task_date)
     end
 end
