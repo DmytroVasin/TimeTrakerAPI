@@ -66,13 +66,15 @@ Story.create(
 Task.create(
   minutes: '90',
   comment: 'Create ZERO education!',
-  story_id: story_1.id
+  story_id: story_1.id,
+  task_date: DateTime.current
 )
 
 Task.create(
   minutes: '90',
   comment: 'Create first education!',
-  story_id: story_1.id
+  story_id: story_1.id,
+  task_date: DateTime.current
 )
 
 
