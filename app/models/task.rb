@@ -1,6 +1,8 @@
 class Task < ActiveRecord::Base
   belongs_to :story
 
+  validates :time, numericality: { greater_than: 0 }
+
   def year_month_day
     self.created_at.strftime('%Y/%m/%d')
   end
