@@ -3,7 +3,7 @@ class Task < ActiveRecord::Base
 
   validates :minutes, numericality: { greater_than: 0 }
 
-  def year_month_day
+  def task_date_with_format
     self.task_date.strftime('%Y/%m/%d')
   end
 
