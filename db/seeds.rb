@@ -80,7 +80,7 @@ Task.create(
   time: '30',
   comment: 'Create second education!',
   story_id: story_1.id,
-  created_at: DateTime.yesterday
+  task_date: DateTime.yesterday
 )
 
 
@@ -88,5 +88,5 @@ Task.create(
   time: '10',
   comment: 'Create five education!',
   story_id: story_1.id,
-  created_at: DateTime.yesterday
+  task_date: DateTime.yesterday
 )

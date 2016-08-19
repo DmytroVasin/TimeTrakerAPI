@@ -4,7 +4,7 @@ class Task < ActiveRecord::Base
   validates :time, numericality: { greater_than: 0 }
 
   def year_month_day
-    self.created_at.strftime('%Y/%m/%d')
+    self.task_date.strftime('%Y/%m/%d')
   end
 
   def as_json
