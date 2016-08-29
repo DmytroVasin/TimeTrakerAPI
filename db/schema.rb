@@ -29,12 +29,12 @@ ActiveRecord::Schema.define(version: 20160819060805) do
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.string   "time"
+    t.integer  "minutes",    default: 0, null: false
     t.text     "comment"
     t.integer  "story_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.datetime "task_date"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.datetime "task_date",              null: false
   end
 
 end
