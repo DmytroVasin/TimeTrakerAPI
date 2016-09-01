@@ -1,4 +1,3 @@
-# peaceful-dawn-52251.herokuapp.com
 Rails.application.routes.draw do
   resource :tray_stories, only: :show
 

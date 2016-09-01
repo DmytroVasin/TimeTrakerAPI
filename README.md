@@ -1,24 +1,15 @@
-## README
+## Time Tracker Api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Basec on Rails + ActiveModel Serializer
 
-Things you may want to cover:
+Pushed on Heroku:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* GET https://time-tracker-api.herokuapp.com/stories.json
+* GET https://time-tracker-api.herokuapp.com/periods.json
+* GET https://time-tracker-api.herokuapp.com/stories/${id}.json
+* POST https://time-tracker-api.herokuapp.com/stories/${id}.json
+* PATCH https://time-tracker-api.herokuapp.com/stories/${id}.json
+* DELETE https://time-tracker-api.herokuapp.com/stories/${id}.json
+* GET https://time-tracker-api.herokuapp.com/graph.json
+* POST https://time-tracker-api.herokuapp.com/stories/${storyId}/tasks.json
+* DELETE https://time-tracker-api.herokuapp.com/stories/${storyId}/tasks/${taskId}.json
